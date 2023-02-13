@@ -1,0 +1,104 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+:root {
+  --green: #659999;
+  --red: #f4791f;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto Mono', monospace;
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px gray;
+  position: relative;
+}
+header, footer {
+    height: 6rem;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header:before, footer:before {
+    background-image: url(bg.jpg);
+    background-size: cover;
+    opacity: 0.3;
+    content: "";
+    width: 100%;
+    height: 6rem;
+    position: absolute;
+    left: 0;
+}
+header::before {
+    top: 0;
+}
+footer::before {
+    bottom: 0;
+}
+h1 {
+    color: var(--green);
+}
+footer a {
+    text-decoration: none;
+    border-bottom:  2px solid var(--red);
+}
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0.5rem;
+    align-items: center;
+    background-image: linear-gradient(to right, var(--green), var(--red));
+}
+nav a {
+    text-decoration: none;
+    width: 150px;
+    border: 1px solid white;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+}
+nav a:hover {
+    background-color: var(--green);
+    color: var(--red);
+}
+main {
+    background-color: rgba(190, 190, 190, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+section {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid black; */
+    margin: 5px;
+    justify-content: space-between;
+}
+section img {
+    width: 100%;
+    border-radius: 10px;
+}
+p {
+    text-align: center;
+}
+section a {
+    text-decoration: none;
+    width: 150px;
+    color: var(--green);
+    border: 1px solid var(--red);
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
